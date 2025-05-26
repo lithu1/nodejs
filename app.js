@@ -8,4 +8,6 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, () => {
     console.log(`App running on http://localhost:${PORT}`);
+    res.send('Hello from Node.js CI/CD Pipeline!');
+
 });
