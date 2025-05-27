@@ -21,7 +21,7 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: (Optional) Run tests
+    - name: Run tests (optional)
       run: echo "No tests yet"
 
     - name: Log in to DockerHub
@@ -31,9 +31,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Build Docker image
-      run: |
-        docker build -t lithu213/nodejs .
+      run: docker build -t lithu213/nodejs-demo-app .
 
     - name: Push Docker image
-      run: |
-        docker push lithu213/nodejs .
+      run: docker push lithu213/nodejs-demo-app
